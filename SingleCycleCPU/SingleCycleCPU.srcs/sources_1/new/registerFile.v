@@ -16,7 +16,7 @@ initial
 begin
 //    Registers[0] <= 0;
     for (i = 0; i < 32; i = i + 1)
-        Registers[i] <= i+1;
+        Registers[i] <= i;
 end
 
 always @(posedge clk)

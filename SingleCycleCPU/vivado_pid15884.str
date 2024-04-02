@@ -4585,3 +4585,31 @@ selectButton("OptionPane.button", "Discard"); // JButton (v, B)
 // Tcl Message: close_sim 
 // Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
 dismissDialog("Close"); // bz (cs)
+// Elapsed time: 53 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Control_Unit.v", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "instruction_Memory.v", 6); // m (l, cs)
+selectCodeEditor("instruction_Memory.v", 427, 27); // bP (w, cs)
+selectCodeEditor("instruction_Memory.v", 161, 117); // bP (w, cs)
+// Elapsed time: 29 seconds
+selectCodeEditor("instruction_Memory.v", 144, 55); // bP (w, cs)
+// Elapsed time: 29 seconds
+selectCodeEditor("instruction_Memory.v", 129, 55); // bP (w, cs)
+selectCodeEditor("instruction_Memory.v", 245, 86); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_Processor (RISC_V_Processor.v), RF : registerFile (registerFile.v)]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_Processor (RISC_V_Processor.v), RF : registerFile (registerFile.v)]", 7, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("registerFile.v", 240, 132); // bP (w, cs)
+selectCodeEditor("registerFile.v", 145, 118); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 73 seconds
+selectCodeEditor("registerFile.v", 371, 136); // bP (w, cs)
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_Processor (RISC_V_Processor.v), DM : data_Memory (data_Memory.v)]", 14, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_Processor (RISC_V_Processor.v), DM : data_Memory (data_Memory.v)]", 14, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("data_Memory.v", 137, 226); // bP (w, cs)
+// Elapsed time: 95 seconds
+selectCodeEditor("data_Memory.v", 195, 224); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE

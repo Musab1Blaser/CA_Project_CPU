@@ -8,15 +8,19 @@ input MemWrite,
 input MemRead,
 output reg [63:0] Read_Data
 );
-reg [7:0] DM [63:0];
+reg [7:0] DM [511:0];
 
 integer i;
 
 initial
 begin
     Read_Data <= 0;
-    for (i = 0; i < 64; i = i + 1)
-        DM[i] <= i+1;
+    for (i = 0; i < 512; i = i + 1)
+        DM[i] = 0;
+    DM[256] = 8'd4;
+    DM[264] = 8'd8;
+    DM[272] = 8'd3;
+    DM[280] = 8'd1;
     
 end
 
