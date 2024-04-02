@@ -22,5 +22,12 @@ module ALU_Control(
             if (Funct == 4'b0110)
                 Operation <= 4'b0001;
         end
+    else if (ALUOp == 2'b11)
+        begin
+            if (Funct[0] == 1'b0) // addi
+                Operation <= 4'b0010;
+            else
+                Operation <= 4'b1111; // slli
+        end
     end
 endmodule

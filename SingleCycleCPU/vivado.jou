@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Apr  2 09:14:16 2024
+# Process ID: 15884
+# Current directory: C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31472 C:\Users\Musab\OneDrive - Habib University\4th Semester\CA\Labs\Lab 11\CA_Project_CPU\SingleCycleCPU\SingleCycleCPU.xpr
+# Log file: C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/vivado.log
+# Journal file: C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.xpr}
+update_compile_order -fileset sources_1

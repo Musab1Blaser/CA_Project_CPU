@@ -47,7 +47,7 @@ module Control_Unit(
             Branch <= 1;
             ALUOp <= 2'b01;
             end
-        if (Opcode == 7'b0010011) // addi
+        if (Opcode == 7'b0010011) // addi/sll
             begin
             ALUSrc <= 1;
             MemToReg <= 0;
