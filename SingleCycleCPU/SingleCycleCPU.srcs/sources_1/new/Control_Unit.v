@@ -37,7 +37,7 @@ module Control_Unit(
             Branch <= 0;
             ALUOp <= 2'b00;
             end
-        if (Opcode == 7'b1100011) //SBType
+        if (Opcode == 7'b1100011) //SBType - beq/blt
             begin
             ALUSrc <= 0;
             MemToReg <= 1'bx;

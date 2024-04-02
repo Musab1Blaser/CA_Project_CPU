@@ -33,13 +33,13 @@ module RISC_V_Processor(input clk, input reset);
     ALU_Control ALU_CU (ALUOp, {Instruction[30], Instruction[14:12]}, operation);
     
     wire [63:0] branch_address;
-    Adder Branch_Adder (PC_Out, {imm_data[62:0], 1'b0}, branch_address);
+    Adder Branch_Adder (PC_Out, imm_data[63:0], branch_address);
     
     wire [63:0] result;
-    wire zero;
-    ALU_64_bit ALU (ReadData1, op2, operation, result, zero);
+    wire zero, lt;
+    ALU_64_bit ALU (ReadData1, op2, operation, result, zero, lt);
     
-    wire takeBranch = Branch & zero;
+    wire takeBranch = Branch & ((funct3[2] == 0 & zero) | (funct3[2] == 1 & lt));
     mux_2 pc_mux (PC_adder_out, branch_address, takeBranch, PC_In);
     
     wire [63:0] Read_Data;

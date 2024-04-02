@@ -12,3 +12,54 @@
 start_gui
 open_project {C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.xpr}
 update_compile_order -fileset sources_1
+launch_simulation
+source risc_V_TB.tcl
+restart
+run all
+close_sim
+launch_simulation
+source risc_V_TB.tcl
+restart
+run all
+restart
+run all
+restart
+run all
+close_sim
+launch_simulation
+source risc_V_TB.tcl
+restart
+run all
+close_sim
+launch_simulation
+source risc_V_TB.tcl
+restart
+run all
+restart
+run all
+restart
+run all
+close_sim
+launch_simulation
+source risc_V_TB.tcl
+restart
+run all
+close_sim
+launch_simulation
+source risc_V_TB.tcl
+restart
+run all
+close_sim
+launch_simulation
+source risc_V_TB.tcl
+restart
+run all
+restart
+run all
+close_sim
+launch_simulation
+source risc_V_TB.tcl
+restart
+restart
+run all
+close_sim

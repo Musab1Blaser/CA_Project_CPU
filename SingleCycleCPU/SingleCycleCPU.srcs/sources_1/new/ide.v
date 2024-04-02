@@ -40,6 +40,7 @@ case (instruction[6:5])
     begin
         imm_data[12:1] = {instruction[31], instruction[7], instruction[30:25], instruction[11:8]};
         imm_data[63:13] = (imm_data[12] == 1 ? 51'hf_ffff_ffff_ffff : 51'h0); 
+        imm_data[0] = 1'b0;
     end
 endcase 
 end

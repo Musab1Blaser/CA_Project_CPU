@@ -7,10 +7,10 @@ output reg [31:0] Instruction
 reg [7:0] IM [15:0];
 initial 
 begin
-    IM[0] <= 8'h83 ;
-    IM[1] <= 8'h34 ;
-    IM[2] <= 8'h85 ;
-    IM[3] <= 8'h02 ;
+    IM[0] <= 8'h63 ;
+    IM[1] <= 8'hc4 ; 
+    IM[2] <= 8'h20 ;
+    IM[3] <= 8'h00 ;
     IM[4] <= 8'hB3 ;
     IM[5] <= 8'h84 ;
     IM[6] <= 8'h9A ;
