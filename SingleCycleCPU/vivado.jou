@@ -63,3 +63,22 @@ restart
 restart
 run all
 close_sim
+launch_simulation
+source risc_V_TB.tcl
+restart
+run all
+restart
+run all
+restart
+run all
+restart
+run all
+close_sim
+launch_simulation
+source risc_V_TB.tcl
+close_sim
+launch_simulation
+source risc_V_TB.tcl
+restart
+run all
+close_sim
