@@ -42,10 +42,11 @@ module RISC_V_Pipelined_Processor(input clk, input reset);
     wire [4:0] rd, rs1, rs2;
     wire [63:0] ReadData1, ReadData2;
     wire [63:0] PC_Out2;
+    wire [3:0] funct;
 
     ID_EX id_ex (clk, 
     MemToReg_next, RegWrite_next, Branch_next, MemWrite_next, MemRead_next, ALUOp_next, ALUSrc_next, 
-    PC_Out, imm_data_next, ReadData1_next, ReadData2_next, rs1_next, rs2_next, rd_next, funct_next,
+    PC_Out, imm_data_next, ReadData1_next, ReadData2_next, rs1_next, rs2_next, rd_next, {Instruction[30], Instruction[14:12]},
     
     MemToReg, RegWrite, Branch, MemWrite, MemRead, ALUOp, ALUSrc, 
     PC_Out2, imm_data, ReadData1, ReadData2, rs1, rs2, rd, funct);
@@ -54,7 +55,7 @@ module RISC_V_Pipelined_Processor(input clk, input reset);
     mux_2 r2_imm_mux (ReadData2, imm_data, ALUSrc, op2);
     
     wire [3:0] operation;
-    ALU_Control ALU_CU (ALUOp, {Instruction[30], Instruction[14:12]}, operation);
+    ALU_Control ALU_CU (ALUOp, funct, operation);
     
     wire [63:0] branch_address_next;
     Adder Branch_Adder (PC_Out2, imm_data[63:0], branch_address_next);
@@ -78,7 +79,8 @@ module RISC_V_Pipelined_Processor(input clk, input reset);
     branch_address, zero, lt, 
     result, MemWriteData, rd2);
     
-    wire takeBranch = Branch2 & ((funct3[2] == 0 & zero) | (funct3[2] == 1 & lt)); // funct3 broken
+    wire takeBranch = 0;
+//    Branch2 & ((funct3[2] == 0 & zero) | (funct3[2] == 1 & lt)); // funct3 broken - needs to be taken from pipeline - needs to be passed along pipeline
     mux_2 pc_mux (PC_adder_out, branch_address, takeBranch, PC_In);
     
     

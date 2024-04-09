@@ -2,3 +2,6 @@ Running: xsim.dir/Pipe_tb_behav/xsimk.exe -simmode gui -wdb Pipe_tb_behav.wdb -s
 Design successfully loaded
 Design Loading Memory Usage: 6788 KB (Peak: 6788 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 7508 KB (Peak: 7508 KB)
+Simulation CPU Usage: 0 ms

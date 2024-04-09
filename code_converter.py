@@ -1,5 +1,5 @@
 x="""
-0x10000513	addi x10 x0 256	addi x10, x0, 0x100 # array = [4, 8, 3, 1]
+0x10000513	addi x10 x0 256	addi x10, x0, 0x100 # array = [4, 8, 3, 1] 
 0x00400593	addi x11 x0 4	addi x11, x0, 4 # size = 4
 0x04050263	beq x10 x0 68	beq x10, x0, sorted # address is null
 0x04058063	beq x11 x0 64	beq x11, x0, sorted # len is 0

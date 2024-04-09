@@ -1,0 +1,25 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../SingleCycleCPU.srcs/sources_1/new/ALU_64_bit.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/ALU_Control.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/Adder.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/Control_Unit.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/EX_MEM.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/ID_EX.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/IF_ID.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/MEM_WB.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/Program_Counter.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/RISC_V_Pipelined_Processor.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/data_Memory.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/ide.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/instruction_Memory.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/instruction_parser.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/mux_2.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/registerFile.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/risc_v_pipelined_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
