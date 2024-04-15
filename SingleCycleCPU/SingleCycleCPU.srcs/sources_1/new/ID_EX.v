@@ -17,6 +17,17 @@ output reg [63:0] readdata1, output reg [63:0] readdata2,
 
 output reg [4:0] rs1, output reg [4:0] rs2, output reg [4:0] rd, output reg [3:0] funct);
 
+initial
+begin
+    memtoreg <= 0;
+    regwrite <= 0;
+    branch <= 0;
+    memwrite <= 0;
+    memread <= 0;
+    aluop <= 0;
+    alusrc <= 0;
+end
+
 always @(posedge clk)
 begin
     memtoreg <= MemToReg;

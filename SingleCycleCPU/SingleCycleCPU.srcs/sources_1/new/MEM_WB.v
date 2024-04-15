@@ -15,6 +15,12 @@ module MEM_WB(
     output reg [4:0] rd    
      
     );
+    
+initial
+begin
+    memtoreg <= 0;
+    regwrite <= 0;
+end
    
     always @ (posedge clk)
     begin

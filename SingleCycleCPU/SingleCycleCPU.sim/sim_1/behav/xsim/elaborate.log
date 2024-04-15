@@ -19,7 +19,9 @@ Compiling module xil_defaultlib.ide
 Compiling module xil_defaultlib.ID_EX
 Compiling module xil_defaultlib.mux_2
 Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.mux_3
 Compiling module xil_defaultlib.ALU_64_bit
+Compiling module xil_defaultlib.forwarding_unit
 Compiling module xil_defaultlib.EX_MEM
 Compiling module xil_defaultlib.data_Memory
 Compiling module xil_defaultlib.MEM_WB

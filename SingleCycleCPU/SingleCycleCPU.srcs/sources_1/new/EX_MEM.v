@@ -7,6 +7,7 @@ module EX_MEM(
    
     input wire [63:0] BranchAddress, input Zero, input Lt,
     input wire [63:0] ALUResult, input wire [63:0] MemWriteData, input wire [4:0] RD,
+    input [3:0] Funct,
    
     output reg memtoreg, regwrite, memread, memwrite, branch,
    
@@ -14,8 +15,18 @@ module EX_MEM(
     output reg zero, lt,
     output reg [63:0] aluresult, memwritedata,
    
-    output reg [4:0] rd
+    output reg [4:0] rd,
+    output reg [3:0] funct
     );
+    
+initial
+begin
+    memtoreg <= 0;
+    regwrite <= 0;
+    branch <= 0;
+    memwrite <= 0;
+    memread <= 0;
+end
    
     always @ (posedge clk)
     begin
@@ -31,6 +42,7 @@ module EX_MEM(
         aluresult <= ALUResult;
         memwritedata <= MemWriteData;
         rd <= RD;
+        funct <= Funct;
     end
    
 endmodule

@@ -42,45 +42,67 @@ module RISC_V_Pipelined_Processor(input clk, input reset);
     wire [4:0] rd, rs1, rs2;
     wire [63:0] ReadData1, ReadData2;
     wire [63:0] PC_Out2;
-    wire [3:0] funct;
+    wire [3:0] funct_next;
 
     ID_EX id_ex (clk, 
     MemToReg_next, RegWrite_next, Branch_next, MemWrite_next, MemRead_next, ALUOp_next, ALUSrc_next, 
     PC_Out, imm_data_next, ReadData1_next, ReadData2_next, rs1_next, rs2_next, rd_next, {Instruction[30], Instruction[14:12]},
     
     MemToReg, RegWrite, Branch, MemWrite, MemRead, ALUOp, ALUSrc, 
-    PC_Out2, imm_data, ReadData1, ReadData2, rs1, rs2, rd, funct);
+    PC_Out2, imm_data, ReadData1, ReadData2, rs1, rs2, rd, funct_next);
     
     wire [63:0] op2;
-    mux_2 r2_imm_mux (ReadData2, imm_data, ALUSrc, op2);
+    wire [63:0] ReadData2_next;
+
+    mux_2 r2_imm_mux (ReadData2_next, imm_data, ALUSrc, op2);
     
     wire [3:0] operation;
-    ALU_Control ALU_CU (ALUOp, funct, operation);
+    ALU_Control ALU_CU (ALUOp, funct_next, operation);
     
     wire [63:0] branch_address_next;
     Adder Branch_Adder (PC_Out2, imm_data[63:0], branch_address_next);
     
+    wire [63:0] op1;
+    wire [1:0] forwardA, forwardB;
+    wire [63:0] result;
+    wire [63:0] result_final;
+    
+    mux_3 op1_mux (ReadData1, result_final, result, forwardA, op1);
+    
+    mux_3 op2_mux (ReadData2, result_final, result, forwardB, ReadData2_next);
+    
     wire [63:0] result_next;
     wire zero_next, lt_next;
-    ALU_64_bit ALU (ReadData1, op2, operation, result_next, zero_next, lt_next);
+    ALU_64_bit ALU (op1, op2, operation, result_next, zero_next, lt_next);
     
     wire Branch2, MemRead2, MemToReg2, MemWrite2, RegWrite2;
+    
+    wire [4:0] rd2;
+    
+    forwarding_unit fw_unit (clk, rd2, RegWrite2,
+    rd_final, RegWrite_final,
+    rs1, rs2,
+    
+    forwardA, forwardB
+    );
+    
+    
     wire [63:0] branch_address;
     wire zero, lt;
-    wire [63:0] result;
-    wire [4:0] rd2;
+    
     wire [63:0] MemWriteData;
+    wire [3:0] funct;
+
     
     EX_MEM ex_mem (clk, MemToReg, RegWrite, MemRead, MemWrite, Branch,
     branch_address_next, zero_next, lt_next,
-    result_next, ReadData2, rd,
+    result_next, ReadData2_next, rd, funct_next,
     
     MemToReg2, RegWrite2, MemRead2, MemWrite2, Branch2, 
     branch_address, zero, lt, 
-    result, MemWriteData, rd2);
+    result, MemWriteData, rd2, funct);
     
-    wire takeBranch = 0;
-//    Branch2 & ((funct3[2] == 0 & zero) | (funct3[2] == 1 & lt)); // funct3 broken - needs to be taken from pipeline - needs to be passed along pipeline
+    wire takeBranch = Branch2 & ((funct[2] == 0 & zero) | (funct[2] == 1 & lt)); // funct3 broken - needs to be taken from pipeline - needs to be passed along pipeline
     mux_2 pc_mux (PC_adder_out, branch_address, takeBranch, PC_In);
     
     
@@ -89,7 +111,6 @@ module RISC_V_Pipelined_Processor(input clk, input reset);
     
     
     wire [63:0] Read_Data;
-    wire [63:0] result_final;
 
     MEM_WB mem_wb (clk,
     MemToReg2, RegWrite2, Read_Data_next, result, rd2,

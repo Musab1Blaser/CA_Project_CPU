@@ -7,6 +7,7 @@ output reg [31:0] Instruction
 reg [7:0] IM [255:0];
 initial 
 begin
+// addi x10 x0 0x100
 IM[0] <= 8'h13;
 IM[1] <= 8'h05;
 IM[2] <= 8'h00;
