@@ -12,6 +12,7 @@ verilog xil_defaultlib  \
 "../../../../SingleCycleCPU.srcs/sources_1/new/RISC_V_Pipelined_Processor.v" \
 "../../../../SingleCycleCPU.srcs/sources_1/new/data_Memory.v" \
 "../../../../SingleCycleCPU.srcs/sources_1/new/forwarding_unit.v" \
+"../../../../SingleCycleCPU.srcs/sources_1/new/hazard_unit.v" \
 "../../../../SingleCycleCPU.srcs/sources_1/new/ide.v" \
 "../../../../SingleCycleCPU.srcs/sources_1/new/instruction_Memory.v" \
 "../../../../SingleCycleCPU.srcs/sources_1/new/instruction_parser.v" \

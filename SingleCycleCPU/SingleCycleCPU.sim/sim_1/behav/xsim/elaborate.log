@@ -12,12 +12,13 @@ Compiling module xil_defaultlib.Program_Counter
 Compiling module xil_defaultlib.Adder
 Compiling module xil_defaultlib.instruction_Memory
 Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.hazard_unit
 Compiling module xil_defaultlib.instruction_parser
 Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.mux_2
 Compiling module xil_defaultlib.registerFile
 Compiling module xil_defaultlib.ide
 Compiling module xil_defaultlib.ID_EX
-Compiling module xil_defaultlib.mux_2
 Compiling module xil_defaultlib.ALU_Control
 Compiling module xil_defaultlib.mux_3
 Compiling module xil_defaultlib.ALU_64_bit

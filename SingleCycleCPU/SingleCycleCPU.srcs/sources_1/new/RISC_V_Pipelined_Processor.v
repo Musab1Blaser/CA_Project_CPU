@@ -3,7 +3,9 @@
 module RISC_V_Pipelined_Processor(input clk, input reset);
     wire [63:0] PC_In;
     wire [63:0] PC_next;
-    Program_Counter PC (clk, reset, PC_In, PC_next);
+    
+    wire PC_Write, IF_ID_Write;
+    Program_Counter PC (clk, reset, PC_Write, PC_In, PC_next);
     
     wire [63:0] PC_adder_out;
     Adder PC_ADD (PC_next, 64'd4, PC_adder_out);
@@ -13,7 +15,14 @@ module RISC_V_Pipelined_Processor(input clk, input reset);
 
     wire [63:0] PC_Out;
     wire [31:0] Instruction;
-    IF_ID if_id (clk, PC_next, Instruction_next, PC_Out, Instruction);
+    IF_ID if_id (clk, IF_ID_Write, PC_next, Instruction_next, PC_Out, Instruction);
+
+    wire MuxSignal;    
+    wire Branch, MemRead, MemToReg, MemWrite, ALUSrc, RegWrite;
+    wire [4:0] rd, rs1, rs2;
+    
+    hazard_unit hu (clk, rs1_next, rs2_next, rd,
+    MemRead, PC_Write, IF_ID_Write, MuxSignal);
 
     wire [6:0] opcode;
     wire [4:0] rd_next, rs1_next, rs2_next;
@@ -25,6 +34,9 @@ module RISC_V_Pipelined_Processor(input clk, input reset);
     wire [1:0] ALUOp_next;
     Control_Unit CU (opcode, Branch_next, MemRead_next, MemToReg_next, MemWrite_next, ALUSrc_next, RegWrite_next, ALUOp_next);
     
+    wire [63:0] control_signals;
+
+    mux_2 ctrl_mux (64'b0, {56'b0,  MemToReg_next, RegWrite_next, Branch_next, MemWrite_next, MemRead_next, ALUOp_next, ALUSrc_next}, MuxSignal, control_signals); 
     
     wire MemToReg_final, RegWrite_final;
     wire [4:0] rd_final;
@@ -36,16 +48,14 @@ module RISC_V_Pipelined_Processor(input clk, input reset);
     ide Imm_Gen (Instruction, imm_data_next);
     
     
-    wire Branch, MemRead, MemToReg, MemWrite, ALUSrc, RegWrite;
     wire [1:0] ALUOp;
     wire [63:0] imm_data;    
-    wire [4:0] rd, rs1, rs2;
     wire [63:0] ReadData1, ReadData2;
     wire [63:0] PC_Out2;
     wire [3:0] funct_next;
 
     ID_EX id_ex (clk, 
-    MemToReg_next, RegWrite_next, Branch_next, MemWrite_next, MemRead_next, ALUOp_next, ALUSrc_next, 
+    control_signals[7], control_signals[6], control_signals[5], control_signals[4], control_signals[3], control_signals[2:1], control_signals[0], 
     PC_Out, imm_data_next, ReadData1_next, ReadData2_next, rs1_next, rs2_next, rd_next, {Instruction[30], Instruction[14:12]},
     
     MemToReg, RegWrite, Branch, MemWrite, MemRead, ALUOp, ALUSrc, 
