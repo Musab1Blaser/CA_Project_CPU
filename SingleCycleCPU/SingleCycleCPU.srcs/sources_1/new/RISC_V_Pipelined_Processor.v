@@ -52,9 +52,9 @@ module RISC_V_Pipelined_Processor(input clk, input reset);
     PC_Out2, imm_data, ReadData1, ReadData2, rs1, rs2, rd, funct_next);
     
     wire [63:0] op2;
-    wire [63:0] ReadData2_next;
+    wire [63:0] ReadData2_next2;
 
-    mux_2 r2_imm_mux (ReadData2_next, imm_data, ALUSrc, op2);
+    mux_2 r2_imm_mux (ReadData2_next2, imm_data, ALUSrc, op2);
     
     wire [3:0] operation;
     ALU_Control ALU_CU (ALUOp, funct_next, operation);
@@ -69,7 +69,7 @@ module RISC_V_Pipelined_Processor(input clk, input reset);
     
     mux_3 op1_mux (ReadData1, result_final, result, forwardA, op1);
     
-    mux_3 op2_mux (ReadData2, result_final, result, forwardB, ReadData2_next);
+    mux_3 op2_mux (ReadData2, result_final, result, forwardB, ReadData2_next2);
     
     wire [63:0] result_next;
     wire zero_next, lt_next;
@@ -96,7 +96,7 @@ module RISC_V_Pipelined_Processor(input clk, input reset);
     
     EX_MEM ex_mem (clk, MemToReg, RegWrite, MemRead, MemWrite, Branch,
     branch_address_next, zero_next, lt_next,
-    result_next, ReadData2_next, rd, funct_next,
+    result_next, ReadData2_next2, rd, funct_next,
     
     MemToReg2, RegWrite2, MemRead2, MemWrite2, Branch2, 
     branch_address, zero, lt, 
