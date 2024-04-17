@@ -20,10 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ide(input [31:0] instruction, output reg [63:0] imm_data);
+module ide(input reset, input [31:0] instruction, output reg [63:0] imm_data);
 
 always @(*)
 begin
+if (reset)
+    imm_data = 0;
+else
 case (instruction[6:5])
     2'b00: // I-Type
     begin

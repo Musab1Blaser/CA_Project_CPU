@@ -19,10 +19,10 @@ begin
         Registers[i] <= i;
 end
 
-always @(posedge clk)
+always @(negedge clk)
 begin
     if (RegWrite)
-        Registers[RD] <= WriteData;
+        Registers[RD] = WriteData;
 end
 
 always @(*)

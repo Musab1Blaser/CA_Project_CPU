@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 module EX_MEM(
-    input clk,
+    input clk, input flush,
    
     input wire MemToReg, input wire RegWrite, 
     input wire MemRead, input wire MemWrite, input wire Branch,
@@ -30,12 +30,22 @@ end
    
     always @ (posedge clk)
     begin
-   
-        memtoreg <= MemToReg;
-        regwrite <= RegWrite;
-        memread <= MemRead;
-        memwrite <= MemWrite;
-        branch <= Branch;
+        if (flush)
+        begin
+            memtoreg <= 0;
+            regwrite <= 0;
+            memread <= 0;
+            memwrite <= 0;
+            branch <= 0;
+        end
+        else
+        begin
+            memtoreg <= MemToReg;
+            regwrite <= RegWrite;
+            memread <= MemRead;
+            memwrite <= MemWrite;
+            branch <= Branch;
+        end
         branchaddress <= BranchAddress;
         zero = Zero;
         lt = Lt;

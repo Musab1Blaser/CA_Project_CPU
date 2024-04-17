@@ -5,6 +5,9 @@ module Program_Counter(
     input [63:0] PC_In,
     output reg [63:0] PC_Out);
     
+    initial
+        PC_Out <= 0;
+    
     always @(posedge clk)
     begin
         if (~reset)

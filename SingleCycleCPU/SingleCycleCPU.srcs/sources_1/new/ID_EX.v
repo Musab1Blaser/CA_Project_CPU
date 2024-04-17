@@ -13,7 +13,7 @@ output reg [1:0] aluop, output reg alusrc,
 
 output reg [63:0] BranchA, output reg [63:0] BranchB,
 
-output reg [63:0] readdata1, output reg [63:0] readdata2,
+output reg [63:0] readdata1, readdata2,
 
 output reg [4:0] rs1, output reg [4:0] rs2, output reg [4:0] rd, output reg [3:0] funct);
 

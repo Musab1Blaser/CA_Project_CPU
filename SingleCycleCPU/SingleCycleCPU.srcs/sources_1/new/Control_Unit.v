@@ -57,5 +57,15 @@ module Control_Unit(
             Branch <= 0;
             ALUOp <= 2'b11;
             end
+        if (Opcode == 7'b0000000) // NOP
+            begin
+            ALUSrc <= 0;
+            MemToReg <= 0;
+            RegWrite <= 0;
+            MemRead <= 0;
+            MemWrite <= 0;
+            Branch <= 0;
+            ALUOp <= 2'b00;
+            end
     end
 endmodule
