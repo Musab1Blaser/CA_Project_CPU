@@ -117,7 +117,7 @@ module RISC_V_Pipelined_Processor(input clk, input reset);
     branch_address, zero, lt, 
     result, MemWriteData, rd2, funct);
 
-    assign takeBranch = Branch2 & ((funct[2] == 0 & zero) | (funct[2] == 1 & lt)); // funct3 broken - needs to be taken from pipeline - needs to be passed along pipeline
+    assign takeBranch = Branch2 & ((funct[2] == 0 & zero) | (funct[2] == 1 & lt)); // f
     mux_2 pc_mux (PC_adder_out, branch_address, takeBranch, PC_In);
     
     
