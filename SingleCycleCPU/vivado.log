@@ -2,10 +2,10 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue Apr  2 09:14:16 2024
-# Process ID: 15884
+# Start of session at: Fri Apr 19 19:41:57 2024
+# Process ID: 25032
 # Current directory: C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31472 C:\Users\Musab\OneDrive - Habib University\4th Semester\CA\Labs\Lab 11\CA_Project_CPU\SingleCycleCPU\SingleCycleCPU.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25192 C:\Users\Musab\OneDrive - Habib University\4th Semester\CA\Labs\Lab 11\CA_Project_CPU\SingleCycleCPU\SingleCycleCPU.xpr
 # Log file: C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/vivado.log
 # Journal file: C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU\vivado.jou
 #-----------------------------------------------------------
@@ -13,24 +13,22 @@ start_gui
 open_project {C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.xpr}
 INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
 Current project path is 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU'
-INFO: [Project 1-313] Project file moved from 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/SingleCycleCPU' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
-open_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1015.676 ; gain = 0.000
 update_compile_order -fileset sources_1
 launch_simulation
 Command: launch_simulation 
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'risc_V_TB' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'risc_v_pipelined_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj risc_V_TB_vlog.prj"
+"xvlog --incr --relax -prj risc_v_pipelined_tb_vlog.prj"
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_64_bit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ALU_64_bit
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
@@ -39,12 +37,27 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib Uni
 INFO: [VRFC 10-311] analyzing module Adder
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Program_Counter
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Processor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RISC_V_Processor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Pipelined_Processor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RISC_V_Pipelined_Processor
+INFO: [VRFC 10-2458] undeclared symbol rs1_next, assumed default net type wire [C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Pipelined_Processor.v:26]
+INFO: [VRFC 10-2458] undeclared symbol rs2_next, assumed default net type wire [C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Pipelined_Processor.v:26]
+WARNING: [VRFC 10-2938] 'rs1_next' is already implicitly declared on line 26 [C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Pipelined_Processor.v:33]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/data_Memory.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwarding_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/hazard_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_unit
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ide.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ide
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_Memory.v" into library xil_defaultlib
@@ -53,19 +66,19 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib Uni
 INFO: [VRFC 10-311] analyzing module instruction_parser
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mux_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/mux_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_3
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/registerFile.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module registerFile
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/risc_V_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module risc_V_TB
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/risc_v_pipelined_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_pipelined_tb
 INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xelab -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log"
+"xelab -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_v_pipelined_tb_behav xil_defaultlib.risc_v_pipelined_tb xil_defaultlib.glbl -log elaborate.log"
 Vivado Simulator 2020.1
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_v_pipelined_tb_behav xil_defaultlib.risc_v_pipelined_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -76,793 +89,34 @@ Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.Program_Counter
 Compiling module xil_defaultlib.Adder
 Compiling module xil_defaultlib.instruction_Memory
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.hazard_unit
 Compiling module xil_defaultlib.instruction_parser
 Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.mux_2
 Compiling module xil_defaultlib.registerFile
 Compiling module xil_defaultlib.ide
-Compiling module xil_defaultlib.mux_2
+Compiling module xil_defaultlib.ID_EX
 Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.mux_3
 Compiling module xil_defaultlib.ALU_64_bit
+Compiling module xil_defaultlib.forwarding_unit
+Compiling module xil_defaultlib.EX_MEM
 Compiling module xil_defaultlib.data_Memory
-Compiling module xil_defaultlib.RISC_V_Processor
-Compiling module xil_defaultlib.risc_V_TB
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.RISC_V_Pipelined_Processor
+Compiling module xil_defaultlib.risc_v_pipelined_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot risc_V_TB_behav
-ERROR: [Common 17-165] Too many positional options when parsing '-notrace', please type 'webtalk -help' for usage info.
-
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1015.676 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "risc_V_TB_behav -key {Behavioral:sim_1:Functional:risc_V_TB} -tclbatch {risc_V_TB.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source risc_V_TB.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-xsim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1015.676 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'risc_V_TB_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 1015.676 ; gain = 0.000
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'risc_V_TB' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj risc_V_TB_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_64_bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_64_bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Control
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Control_Unit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Program_Counter
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Processor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RISC_V_Processor
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/data_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module data_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ide.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ide
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_parser.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_parser
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/registerFile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module registerFile
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/risc_V_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module risc_V_TB
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xelab -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Program_Counter
-Compiling module xil_defaultlib.Adder
-Compiling module xil_defaultlib.instruction_Memory
-Compiling module xil_defaultlib.instruction_parser
-Compiling module xil_defaultlib.Control_Unit
-Compiling module xil_defaultlib.registerFile
-Compiling module xil_defaultlib.ide
-Compiling module xil_defaultlib.mux_2
-Compiling module xil_defaultlib.ALU_Control
-Compiling module xil_defaultlib.ALU_64_bit
-Compiling module xil_defaultlib.data_Memory
-Compiling module xil_defaultlib.RISC_V_Processor
-Compiling module xil_defaultlib.risc_V_TB
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot risc_V_TB_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "risc_V_TB_behav -key {Behavioral:sim_1:Functional:risc_V_TB} -tclbatch {risc_V_TB.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source risc_V_TB.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-xsim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1046.477 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'risc_V_TB_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1046.477 ; gain = 0.000
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'risc_V_TB' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj risc_V_TB_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_64_bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_64_bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Control
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Control_Unit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Program_Counter
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Processor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RISC_V_Processor
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/data_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module data_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ide.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ide
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_parser.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_parser
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/registerFile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module registerFile
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/risc_V_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module risc_V_TB
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xelab -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Program_Counter
-Compiling module xil_defaultlib.Adder
-Compiling module xil_defaultlib.instruction_Memory
-Compiling module xil_defaultlib.instruction_parser
-Compiling module xil_defaultlib.Control_Unit
-Compiling module xil_defaultlib.registerFile
-Compiling module xil_defaultlib.ide
-Compiling module xil_defaultlib.mux_2
-Compiling module xil_defaultlib.ALU_Control
-Compiling module xil_defaultlib.ALU_64_bit
-Compiling module xil_defaultlib.data_Memory
-Compiling module xil_defaultlib.RISC_V_Processor
-Compiling module xil_defaultlib.risc_V_TB
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot risc_V_TB_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "risc_V_TB_behav -key {Behavioral:sim_1:Functional:risc_V_TB} -tclbatch {risc_V_TB.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source risc_V_TB.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-xsim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1046.477 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'risc_V_TB_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1046.477 ; gain = 0.000
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'risc_V_TB' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj risc_V_TB_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_64_bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_64_bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Control
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Control_Unit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Program_Counter
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Processor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RISC_V_Processor
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/data_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module data_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ide.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ide
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_parser.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_parser
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/registerFile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module registerFile
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/risc_V_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module risc_V_TB
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xelab -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Program_Counter
-Compiling module xil_defaultlib.Adder
-Compiling module xil_defaultlib.instruction_Memory
-Compiling module xil_defaultlib.instruction_parser
-Compiling module xil_defaultlib.Control_Unit
-Compiling module xil_defaultlib.registerFile
-Compiling module xil_defaultlib.ide
-Compiling module xil_defaultlib.mux_2
-Compiling module xil_defaultlib.ALU_Control
-Compiling module xil_defaultlib.ALU_64_bit
-Compiling module xil_defaultlib.data_Memory
-Compiling module xil_defaultlib.RISC_V_Processor
-Compiling module xil_defaultlib.risc_V_TB
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot risc_V_TB_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "risc_V_TB_behav -key {Behavioral:sim_1:Functional:risc_V_TB} -tclbatch {risc_V_TB.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source risc_V_TB.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-xsim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 1046.477 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'risc_V_TB_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:19 . Memory (MB): peak = 1046.477 ; gain = 0.000
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-restart: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1046.477 ; gain = 0.000
-run all
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'risc_V_TB' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj risc_V_TB_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_64_bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_64_bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Control
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Control_Unit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Program_Counter
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Processor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RISC_V_Processor
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/data_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module data_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ide.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ide
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_parser.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_parser
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/registerFile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module registerFile
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/risc_V_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module risc_V_TB
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xelab -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Program_Counter
-Compiling module xil_defaultlib.Adder
-Compiling module xil_defaultlib.instruction_Memory
-Compiling module xil_defaultlib.instruction_parser
-Compiling module xil_defaultlib.Control_Unit
-Compiling module xil_defaultlib.registerFile
-Compiling module xil_defaultlib.ide
-Compiling module xil_defaultlib.mux_2
-Compiling module xil_defaultlib.ALU_Control
-Compiling module xil_defaultlib.ALU_64_bit
-Compiling module xil_defaultlib.data_Memory
-Compiling module xil_defaultlib.RISC_V_Processor
-Compiling module xil_defaultlib.risc_V_TB
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot risc_V_TB_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "risc_V_TB_behav -key {Behavioral:sim_1:Functional:risc_V_TB} -tclbatch {risc_V_TB.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source risc_V_TB.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-xsim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1062.074 ; gain = 15.598
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'risc_V_TB_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 1062.074 ; gain = 15.598
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'risc_V_TB' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj risc_V_TB_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_64_bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_64_bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Control
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Control_Unit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Program_Counter
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Processor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RISC_V_Processor
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/data_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module data_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ide.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ide
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_parser.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_parser
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/registerFile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module registerFile
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/risc_V_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module risc_V_TB
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xelab -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Program_Counter
-Compiling module xil_defaultlib.Adder
-Compiling module xil_defaultlib.instruction_Memory
-Compiling module xil_defaultlib.instruction_parser
-Compiling module xil_defaultlib.Control_Unit
-Compiling module xil_defaultlib.registerFile
-Compiling module xil_defaultlib.ide
-Compiling module xil_defaultlib.mux_2
-Compiling module xil_defaultlib.ALU_Control
-Compiling module xil_defaultlib.ALU_64_bit
-Compiling module xil_defaultlib.data_Memory
-Compiling module xil_defaultlib.RISC_V_Processor
-Compiling module xil_defaultlib.risc_V_TB
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot risc_V_TB_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "risc_V_TB_behav -key {Behavioral:sim_1:Functional:risc_V_TB} -tclbatch {risc_V_TB.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source risc_V_TB.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-xsim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1135.020 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'risc_V_TB_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 1135.020 ; gain = 0.000
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-restart: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1135.020 ; gain = 0.000
-run all
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'risc_V_TB' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj risc_V_TB_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_64_bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_64_bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Control
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Control_Unit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Program_Counter
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Processor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RISC_V_Processor
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/data_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module data_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ide.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ide
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_parser.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_parser
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/registerFile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module registerFile
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/risc_V_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module risc_V_TB
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xelab -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Program_Counter
-Compiling module xil_defaultlib.Adder
-Compiling module xil_defaultlib.instruction_Memory
-Compiling module xil_defaultlib.instruction_parser
-Compiling module xil_defaultlib.Control_Unit
-Compiling module xil_defaultlib.registerFile
-Compiling module xil_defaultlib.ide
-Compiling module xil_defaultlib.mux_2
-Compiling module xil_defaultlib.ALU_Control
-Compiling module xil_defaultlib.ALU_64_bit
-Compiling module xil_defaultlib.data_Memory
-Compiling module xil_defaultlib.RISC_V_Processor
-Compiling module xil_defaultlib.risc_V_TB
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot risc_V_TB_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "risc_V_TB_behav -key {Behavioral:sim_1:Functional:risc_V_TB} -tclbatch {risc_V_TB.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source risc_V_TB.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-xsim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1135.020 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'risc_V_TB_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1135.020 ; gain = 0.000
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'risc_V_TB' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj risc_V_TB_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_64_bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_64_bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Control
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Control_Unit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Program_Counter
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Processor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RISC_V_Processor
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/data_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module data_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ide.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ide
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_parser.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_parser
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/registerFile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module registerFile
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/risc_V_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module risc_V_TB
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xelab -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Program_Counter
-Compiling module xil_defaultlib.Adder
-Compiling module xil_defaultlib.instruction_Memory
-Compiling module xil_defaultlib.instruction_parser
-Compiling module xil_defaultlib.Control_Unit
-Compiling module xil_defaultlib.registerFile
-Compiling module xil_defaultlib.ide
-Compiling module xil_defaultlib.mux_2
-Compiling module xil_defaultlib.ALU_Control
-Compiling module xil_defaultlib.ALU_64_bit
-Compiling module xil_defaultlib.data_Memory
-Compiling module xil_defaultlib.RISC_V_Processor
-Compiling module xil_defaultlib.risc_V_TB
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot risc_V_TB_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "risc_V_TB_behav -key {Behavioral:sim_1:Functional:risc_V_TB} -tclbatch {risc_V_TB.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source risc_V_TB.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-xsim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1135.020 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'risc_V_TB_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1135.020 ; gain = 0.000
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'risc_V_TB' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj risc_V_TB_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_64_bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_64_bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Control
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Control_Unit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Program_Counter
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Processor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RISC_V_Processor
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/data_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module data_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ide.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ide
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_parser.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_parser
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/registerFile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module registerFile
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/risc_V_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module risc_V_TB
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xelab -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Program_Counter
-Compiling module xil_defaultlib.Adder
-Compiling module xil_defaultlib.instruction_Memory
-Compiling module xil_defaultlib.instruction_parser
-Compiling module xil_defaultlib.Control_Unit
-Compiling module xil_defaultlib.registerFile
-Compiling module xil_defaultlib.ide
-Compiling module xil_defaultlib.mux_2
-Compiling module xil_defaultlib.ALU_Control
-Compiling module xil_defaultlib.ALU_64_bit
-Compiling module xil_defaultlib.data_Memory
-Compiling module xil_defaultlib.RISC_V_Processor
-Compiling module xil_defaultlib.risc_V_TB
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot risc_V_TB_behav
+Built simulation snapshot risc_v_pipelined_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "risc_V_TB_behav -key {Behavioral:sim_1:Functional:risc_V_TB} -tclbatch {risc_V_TB.tcl} -log {simulate.log}"
+   with args "risc_v_pipelined_tb_behav -key {Behavioral:sim_1:Functional:risc_v_pipelined_tb} -tclbatch {risc_v_pipelined_tb.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2020.1
 Time resolution is 1 ps
-source risc_V_TB.tcl
+source risc_v_pipelined_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -873,198 +127,15 @@ source risc_V_TB.tcl
 #   }
 # }
 # run 1000ns
-xsim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1182.816 ; gain = 47.797
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'risc_V_TB_behav' loaded.
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:44 . Memory (MB): peak = 1029.477 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'risc_v_pipelined_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 1182.816 ; gain = 47.797
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:51 . Memory (MB): peak = 1029.477 ; gain = 0.000
 restart
 INFO: [Simtcl 6-17] Simulation restarted
-run all
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run all
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'risc_V_TB' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj risc_V_TB_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_64_bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_64_bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Control
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Control_Unit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Program_Counter
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Processor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RISC_V_Processor
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/data_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module data_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ide.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ide
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_parser.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_parser
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/registerFile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module registerFile
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/risc_V_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module risc_V_TB
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xelab -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Program_Counter
-Compiling module xil_defaultlib.Adder
-Compiling module xil_defaultlib.instruction_Memory
-Compiling module xil_defaultlib.instruction_parser
-Compiling module xil_defaultlib.Control_Unit
-Compiling module xil_defaultlib.registerFile
-Compiling module xil_defaultlib.ide
-Compiling module xil_defaultlib.mux_2
-Compiling module xil_defaultlib.ALU_Control
-Compiling module xil_defaultlib.ALU_64_bit
-Compiling module xil_defaultlib.data_Memory
-Compiling module xil_defaultlib.RISC_V_Processor
-Compiling module xil_defaultlib.risc_V_TB
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot risc_V_TB_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "risc_V_TB_behav -key {Behavioral:sim_1:Functional:risc_V_TB} -tclbatch {risc_V_TB.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-Time resolution is 1 ps
-source risc_V_TB.tcl
-xsim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1182.816 ; gain = 0.000
-INFO: [Common 17-344] 'xsim' was cancelled
-INFO: [Vivado 12-5357] 'simulate' step aborted
-launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 1182.816 ; gain = 0.000
-INFO: [Common 17-344] 'launch_simulation' was cancelled
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'risc_V_TB' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj risc_V_TB_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_64_bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_64_bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Control
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Control_Unit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Program_Counter
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/RISC_V_Processor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RISC_V_Processor
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/data_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module data_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/ide.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ide
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_Memory.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_Memory
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/instruction_parser.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instruction_parser
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sources_1/new/registerFile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module registerFile
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.srcs/sim_1/new/risc_V_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module risc_V_TB
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-"xelab -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d21c0380bdf44c3581dcb8bfbf3716ba --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot risc_V_TB_behav xil_defaultlib.risc_V_TB xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Program_Counter
-Compiling module xil_defaultlib.Adder
-Compiling module xil_defaultlib.instruction_Memory
-Compiling module xil_defaultlib.instruction_parser
-Compiling module xil_defaultlib.Control_Unit
-Compiling module xil_defaultlib.registerFile
-Compiling module xil_defaultlib.ide
-Compiling module xil_defaultlib.mux_2
-Compiling module xil_defaultlib.ALU_Control
-Compiling module xil_defaultlib.ALU_64_bit
-Compiling module xil_defaultlib.data_Memory
-Compiling module xil_defaultlib.RISC_V_Processor
-Compiling module xil_defaultlib.risc_V_TB
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot risc_V_TB_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Musab/OneDrive - Habib University/4th Semester/CA/Labs/Lab 11/CA_Project_CPU/SingleCycleCPU/SingleCycleCPU.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "risc_V_TB_behav -key {Behavioral:sim_1:Functional:risc_V_TB} -tclbatch {risc_V_TB.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source risc_V_TB.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-xsim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1246.543 ; gain = 63.727
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'risc_V_TB_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 1246.543 ; gain = 63.727
-restart
-INFO: [Simtcl 6-17] Simulation restarted
+restart: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1029.477 ; gain = 0.000
 run all
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Apr  2 11:18:31 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 19 20:09:11 2024...

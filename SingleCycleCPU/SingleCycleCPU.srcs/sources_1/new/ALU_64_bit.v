@@ -7,7 +7,7 @@ output wire zero,
 output wire lt);
 
 assign zero = (result == 0);
-assign lt = (a < b); // less than
+assign lt = a[63] ? (b[63] ? a > b : 1) : (b[63] ? 0 : a < b); // less than
 
 always @(*)
 begin
